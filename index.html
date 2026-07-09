@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO -->
+  <title>Nandhu's Portfolio — Editor & Designer</title>
+  <meta name="description" content="Nethra Nandhu A C — Creative Editor and Designer specializing in cinematic video editing, motion graphics, poster design, and apparel design. 3+ years of experience." />
+  <meta name="keywords" content="Nandhu, Nethra Nandhu, video editor, graphic designer, After Effects, CapCut, poster design, t-shirt design, rxne.efx, creative portfolio" />
+  <meta name="author" content="Nethra Nandhu A C" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nandhu's Portfolio — Editor & Designer" />
+  <meta property="og:description" content="Cinematic video edits, stunning poster designs, and creative apparel work by Nethra Nandhu A C." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assests/images/background-intro.webp" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nandhu's Portfolio — Editor & Designer" />
+  <meta name="twitter:description" content="Cinematic video edits, stunning poster designs, and creative apparel work." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assests/logos/after-effects-logo.png" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body class="loading">
+
+  <!-- ─── CUSTOM CURSOR ─────────────────────────────────────── -->
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ─── SCROLL PROGRESS ──────────────────────────────────── -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ─── LOADING SCREEN ───────────────────────────────────── -->
+  <div id="loading-screen" role="status" aria-label="Loading portfolio">
+    <div class="loader-logo">Nandhu's</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="loader-bar"></div>
+    </div>
+    <div class="loader-pct" id="loader-pct">0%</div>
+  </div>
+
+  <!-- ─── NAVIGATION ───────────────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" id="nav-logo">Nandhu's</a>
+      <div class="nav-links" id="nav-links" role="list"></div>
+      <a href="#contact" class="nav-cta" id="nav-cta">Let's Connect</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open mobile menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <button class="lightbox-close" id="nav-mobile-close" style="position:absolute; top:1.5rem; right:1.5rem;" aria-label="Close menu">✕</button>
+    <div id="nav-mobile-links"></div>
+  </div>
+
+  <!-- ─── MAIN CONTENT ─────────────────────────────────────── -->
+  <main>
+
+    <!-- HERO ─────────────────────────────────────────────────── -->
+    <section id="hero" aria-label="Hero introduction">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-bg-image" id="hero-bg-image"></div>
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-aurora">
+          <div class="aurora-blob"></div>
+          <div class="aurora-blob"></div>
+          <div class="aurora-blob"></div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow reveal">Portfolio</div>
+
+        <h1 class="hero-title reveal delay-1">
+          <span class="name-main">Nandhu's</span>
+          <span class="name-accent" id="hero-roles-rotating"></span>
+        </h1>
+
+        <div class="hero-roles reveal delay-2" id="hero-role-badges"></div>
+
+        <p class="hero-bio reveal delay-3" id="hero-bio"></p>
+
+        <div class="hero-actions reveal delay-4" id="hero-actions"></div>
+      </div>
+
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT ────────────────────────────────────────────────── -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Who I Am</span>
+          <h2 class="section-title reveal delay-1" id="about-title">
+            The <span class="highlight">Creative Mind</span> Behind the Work
+          </h2>
+          <p class="section-subtitle reveal delay-2">A passionate visual storyteller with 3+ years of experience turning ideas into compelling visuals.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-visual reveal-left">
+            <div class="about-image-frame" id="about-image-frame">
+              <!-- filled by JS -->
+            </div>
+            <div class="about-stats-float" id="about-stats-float">
+              <!-- filled by JS -->
+            </div>
+          </div>
+
+          <div class="about-content reveal-right">
+            <p class="about-intro" id="about-intro"></p>
+            <a class="about-instagram-badge" id="about-instagram-badge" href="#" target="_blank" rel="noopener noreferrer">
+              <!-- filled by JS -->
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATIVE JOURNEY ─────────────────────────────────────── -->
+    <section id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Creative Journey</span>
+          <h2 class="section-title reveal delay-1" id="journey-title">
+            My <span class="highlight">Story</span>
+          </h2>
+          <p class="section-subtitle reveal delay-2">From first edits to freelance work — a journey fuelled by passion for visuals.</p>
+        </div>
+
+        <div class="journey-timeline" id="journey-timeline">
+          <div class="journey-line" aria-hidden="true"></div>
+          <!-- Timeline items injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS ───────────────────────────────────────────────── -->
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Toolkit</span>
+          <h2 class="section-title reveal delay-1" id="skills-title">
+            <span class="highlight">Software</span> Skills
+          </h2>
+          <p class="section-subtitle reveal delay-2">3+ years mastering industry-standard tools for video editing and graphic design.</p>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          <!-- Skill cards injected by JS -->
+        </div>
+
+        <div class="creative-skills-wrap">
+          <div class="section-header" style="margin-top: var(--sp-2xl);">
+            <span class="section-label reveal">Capabilities</span>
+            <h3 class="section-title reveal delay-1" style="font-size: var(--fs-xl);">
+              <span class="highlight">Creative</span> Skills
+            </h3>
+          </div>
+          <div class="creative-skills-grid" id="creative-skills-grid">
+            <!-- Creative skill pills injected by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS ────────────────────────────────────── -->
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Work</span>
+          <h2 class="section-title reveal delay-1" id="projects-title">
+            Featured <span class="highlight">Projects</span>
+          </h2>
+          <p class="section-subtitle reveal delay-2">A curated selection of video edits, poster designs, and apparel work.</p>
+        </div>
+
+        <div class="projects-filter reveal delay-2" id="projects-filter" role="group" aria-label="Filter projects by category">
+          <!-- Filter buttons injected by JS -->
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO EDITING PORTFOLIO ──────────────────────────────── -->
+    <section id="video-portfolio" aria-labelledby="video-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Video Editing</span>
+          <h2 class="section-title reveal delay-1" id="video-title">
+            Cinematic <span class="highlight">Video Edits</span>
+          </h2>
+          <p class="section-subtitle reveal delay-2">Gym edits, occasion reels, and personal creative films — crafted with precision and passion.</p>
+        </div>
+
+        <div class="video-grid" id="video-grid">
+          <!-- Video cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- POSTER DESIGNS ───────────────────────────────────────── -->
+    <section id="poster-designs" aria-labelledby="poster-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Poster Design</span>
+          <h2 class="section-title reveal delay-1" id="poster-title">
+            Poster <span class="highlight">Designs</span>
+          </h2>
+          <p class="section-subtitle reveal delay-2">Event posters and visual communication pieces created for college and personal projects.</p>
+        </div>
+
+        <div class="poster-grid" id="poster-grid">
+          <!-- Poster cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- T-SHIRT DESIGNS ──────────────────────────────────────── -->
+    <section id="tshirt-designs" aria-labelledby="tshirt-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Apparel Design</span>
+          <h2 class="section-title reveal delay-1" id="tshirt-title">
+            T-Shirt <span class="highlight">Designs</span>
+          </h2>
+          <p class="section-subtitle reveal delay-2">A collection of apparel graphics created for swelix.com — bold, wearable, and distinctive.</p>
+        </div>
+
+        <div class="tshirt-grid" id="tshirt-grid">
+          <!-- T-shirt cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PERSONAL WORKS ───────────────────────────────────────── -->
+    <section id="personal-works" aria-labelledby="personal-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Personal</span>
+          <h2 class="section-title reveal delay-1" id="personal-title">
+            Personal <span class="highlight">Works</span>
+          </h2>
+          <p class="section-subtitle reveal delay-2">Artwork and personal edits created for pure creative expression beyond client work.</p>
+        </div>
+
+        <div class="personal-grid" id="personal-grid">
+          <!-- Personal work cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY ──────────────────────────────────────────────── -->
+    <section id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Gallery</span>
+          <h2 class="section-title reveal delay-1" id="gallery-title">
+            Visual <span class="highlight">Gallery</span>
+          </h2>
+          <p class="section-subtitle reveal delay-2">A mosaic of all creative work — images, previews, and designs.</p>
+        </div>
+
+        <div class="gallery-masonry" id="gallery-masonry">
+          <!-- Gallery items injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- STATISTICS ───────────────────────────────────────────── -->
+    <section id="statistics" aria-labelledby="stats-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">By the Numbers</span>
+          <h2 class="section-title reveal delay-1" id="stats-title">
+            In <span class="highlight">Numbers</span>
+          </h2>
+        </div>
+
+        <div class="stats-grid" id="stats-grid">
+          <!-- Stats injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM ────────────────────────────────────────────── -->
+    <section id="instagram" aria-labelledby="instagram-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Follow Along</span>
+          <h2 class="section-title reveal delay-1" id="instagram-title">
+            Find Me on <span class="highlight">Instagram</span>
+          </h2>
+          <p class="section-subtitle reveal delay-2">Where the creative journey unfolds frame by frame.</p>
+        </div>
+
+        <div id="instagram-card-wrap" class="reveal delay-2">
+          <!-- Instagram card injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT ──────────────────────────────────────────────── -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Get In Touch</span>
+          <h2 class="section-title reveal delay-1" id="contact-title">
+            Let's <span class="highlight">Work Together</span>
+          </h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal-left">
+            <p class="contact-tagline">Interested in <span class="highlight">collaborating?</span></p>
+            <p class="contact-text">Whether you need a cinematic video edit, a striking poster, or apparel designs, I'm available for freelance projects and collaborations. Let's create something extraordinary together.</p>
+            <div class="contact-methods" id="contact-methods">
+              <!-- Contact method links injected by JS -->
+            </div>
+          </div>
+
+          <form class="contact-form reveal-right" id="contact-form" action="mailto:nethranandhuac25@gmail.com" method="POST" enctype="text/plain">
+            <div class="form-group">
+              <label for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" name="name" placeholder="John Doe" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" name="email" placeholder="you@example.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" name="subject" placeholder="Project enquiry" />
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" id="contact-submit">
+              Send Message <span>→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ───────────────────────────────────────────── -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-logo">Nandhu's</div>
+      <div class="footer-links" id="footer-links">
+        <!-- Footer links injected by JS -->
+      </div>
+      <p class="footer-copy">
+        Designed &amp; Developed with <span>♥</span> — Nethra Nandhu A C &copy; <span id="footer-year"></span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ─── BACK TO TOP ──────────────────────────────────────── -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- ─── LIGHTBOX MODAL ───────────────────────────────────── -->
+  <div id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <div class="lightbox-header">
+      <div class="lightbox-title" id="lightbox-title"></div>
+      <div style="display:flex; gap:1rem; align-items:center;">
+        <div class="lightbox-tabs" id="lightbox-tabs"></div>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">✕</button>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; align-items:center; gap:1rem; width:100%; padding: 5rem 2rem 2rem;">
+      <div class="lightbox-media-wrap" id="lightbox-media-wrap" style="position:relative;">
+        <!-- Media injected by JS -->
+        <button class="lightbox-nav-btn lightbox-nav-prev" id="lightbox-prev" aria-label="Previous">‹</button>
+        <div id="lightbox-media-content" style="display:flex; align-items:center; justify-content:center; width:100%;"></div>
+        <button class="lightbox-nav-btn lightbox-nav-next" id="lightbox-next" aria-label="Next">›</button>
+      </div>
+      <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+  </div>
+
+  <!-- ─── VIDEO MODAL ──────────────────────────────────────── -->
+  <div id="video-modal" role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="video-modal-inner">
+      <button class="video-modal-close" id="video-modal-close" aria-label="Close video">✕</button>
+      <div class="video-modal-player">
+        <video id="video-modal-player" controls playsinline controlsList="nodownload">
+          <source id="video-modal-src" src="" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── DATA & SCRIPTS ───────────────────────────────────── -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

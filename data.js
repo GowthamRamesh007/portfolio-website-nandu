@@ -15,9 +15,9 @@ const PROFILE = {
   roles: ["Video Editor", "Graphic Designer", "Visual Storyteller", "Creative Director"],
   tagline: "Blending creativity with precision to bring ideas to life.",
   bio: "I'm Nethra Nandhu A C, an Editor and Designer with a strong passion for visual storytelling. I create visuals that connect with people. My focus is on blending creativity with precision to bring ideas to life in a unique and impactful way.",
-  instagramHandle: "@rxne.efx",
+  instagramHandle: "@nandhuuu.yoo",
   instagramPage: "nandhuuu.yoo",
-  instagramUrl: "https://www.instagram.com/rxne.efx",
+  instagramUrl: "https://www.instagram.com/nandhuuu.yoo/?hl=en",
   email: "nethranandhuac25@gmail.com",
   phone: "+91 9080229122",
   experience: "3+",
@@ -26,7 +26,7 @@ const PROFILE = {
   socialLinks: [
     {
       name: "Instagram",
-      url: "https://www.instagram.com/rxne.efx",
+      url: "https://www.instagram.com/nandhuuu.yoo/?hl=en",
       icon: "assests/icons/social-instagram.webp",
       handle: "@rxne.efx"
     },
@@ -127,7 +127,7 @@ const SOFTWARE_SKILLS = [
 const CREATIVE_SKILLS = [
   { name: "Video Editing", icon: "🎬", level: "Expert" },
   { name: "Motion Graphics", icon: "✨", level: "Advanced" },
-  { name: "Colour Grading", icon: "🎨", level: "Advanced" },
+  { name: "Colour Grading", icon: "🎨", level: "Basic" },
   { name: "Poster Design", icon: "🖼️", level: "Expert" },
   { name: "T-Shirt Design", icon: "👕", level: "Advanced" },
   { name: "Visual Storytelling", icon: "📽️", level: "Expert" },
